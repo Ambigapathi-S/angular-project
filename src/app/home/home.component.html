@@ -1,0 +1,16 @@
+<div class="product-list">
+    <div class="row">
+        <div class="card" *ngFor="let items of foodItems">
+            <div class="image">
+                <img [src]="items.filename" />
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">{{ items.title }}</h3>
+                <p class="card-text">{{ items.type }}</p>
+                <app-star-rating [rating]="items.rating" [isReadOnly]="true"></app-star-rating>
+                <span class="rating-value">{{ items.rating }}</span>
+                <p class="price">&#8377; {{ items.price }}</p>
+            </div>
+        </div>
+    </div>
+</div>
